@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package user;
+
+// Specify the Go package option to the current directory
+option go_package = "./;proto";
+
+service UserService {
+  // CreateUser creates a new user with the provided name and email.
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+
+  // GetUser retrieves a user by their ID.
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+
+  // UpdateUser updates an existing user's details.
+  rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse);
+
+  // DeleteUser deletes a user by their ID.
+  rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+message CreateUserRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message CreateUserResponse {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message UpdateUserRequest {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message UpdateUserResponse {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message DeleteUserRequest {
+  string id = 1;
+}
+
+message DeleteUserResponse {
+  string id = 1;
+}
