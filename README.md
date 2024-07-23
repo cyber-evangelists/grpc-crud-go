@@ -1,7 +1,7 @@
 # gRPC CRUD with Swagger Documentation
 
 ## Overview
-This project demonstrates a basic gRPC CRUD application with Swagger documentation. It includes both gRPC server and client implementations as well as an HTTP server with Swagger integration for API documentation.
+This project demonstrates a basic gRPC CRUD application with Swagger documentation. It includes both gRPC server and client implementations as well as an HTTP server with Swagger integration for API documentation
 
 ## Project Structure
 ### Files and Directories
